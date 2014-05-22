@@ -19,8 +19,10 @@
 		
 		Gender:
 		<br/>
-		<input name="gender" type="radio" checked="checked" value="male"/>Male <br/>
+		<input name="gender" type="radio" value="male"/>Male <br/>
 		<input name="gender" type="radio" value="female"/>Female <br/>
+		<br/>
+		<input name="submit" type="submit" value="Register">
 		
 		</form>
 </body>

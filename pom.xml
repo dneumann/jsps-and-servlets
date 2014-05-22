@@ -5,8 +5,16 @@
 	<groupId>howitest</groupId>
 	<artifactId>jsps-and-servlets</artifactId>
 	<version>0.1</version>
+	<packaging>war</packaging>
 	
 	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.jetty.orbit</groupId>
+			<artifactId>javax.servlet</artifactId>
+			<version>3.0.0.v201112011016</version>
+			<scope>provided</scope>
+		</dependency>
+	
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
