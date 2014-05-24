@@ -9,7 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    
+	protected Registrator getRegistrator() {
+		return new Registrator();
+	}
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("bla");
 	}
