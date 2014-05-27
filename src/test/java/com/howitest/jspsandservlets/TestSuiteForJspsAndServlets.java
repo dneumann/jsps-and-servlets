@@ -9,7 +9,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 
 @RunWith(Suite.class)
-@SuiteClasses({ IndexJspTestPart.class })
+@SuiteClasses({ IndexJspTestPart.class, RegistrationServletTestPart.class })
 public class TestSuiteForJspsAndServlets {
 
 	private static Server jetty;

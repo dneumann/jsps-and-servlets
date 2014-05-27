@@ -4,17 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Invalid parameters</title>
+<title>Registration successful</title>
 </head>
 
 <body>
-<h4>Your data was missing or incorrect.</h4>
-<h4>Details:</h4> 
-
-<pre>
-${validationMessage}
-</pre>
-
+Your registration was successful.
 </body>
-
 </html>

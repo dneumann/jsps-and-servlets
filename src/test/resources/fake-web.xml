@@ -12,14 +12,14 @@
 		<url-pattern>/registration</url-pattern>
 	</servlet-mapping>
 
-	<!--servlet>
+	<servlet>
 		<servlet-name>RegistrationServletChild</servlet-name>
 		<servlet-class>com.howitest.jspsandservlets.testutil.RegistrationServletChild</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>OcrServletChild</servlet-name>
-		<url-pattern>/ocr-servlet-child</url-pattern>
-	</servlet-mapping-->
+		<servlet-name>RegistrationServletChild</servlet-name>
+		<url-pattern>/registration-servlet-child</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>

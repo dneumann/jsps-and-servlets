@@ -3,14 +3,18 @@ package com.howitest.jspsandservlets;
 public class Registrator {
 
 	public String validateData(Parameters params) {
-		String validationMessage = "";
+		String errorMessage = null;
 		if (isEmpty(params.username)) {
-			validationMessage += "No username. ";
+			errorMessage += "No username. ";
 		}
 		if (isEmpty(params.password)) {
-			validationMessage += "No password. ";
+			errorMessage += "No password. ";
 		}
-		return validationMessage;
+		if (isEmpty(errorMessage)) {
+			return "OK";
+		} else {
+			return errorMessage;
+		}
 	}
 	
 	private boolean isEmpty(String string) {

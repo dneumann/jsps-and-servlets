@@ -12,19 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
-	protected Registrator getRegistrator() {
+	// for unit tests
+	protected Registrator getRegistrator(HttpServletRequest request) {
 		return new Registrator();
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Registrator registrator = getRegistrator();
+		Registrator registrator = getRegistrator(request);
 		Parameters params = new Parameters();
 		params.username = request.getParameter("username");
 		params.password = request.getParameter("password");
 		params.gender = request.getParameter("gender");
 		
 		String validationMessage = registrator.validateData(params);
-		if ("".equals(validationMessage)) {
+		if ("OK".equals(validationMessage)) {
+			registrator.registerUser(params);
 			goToView("success.jsp", request, response);
 		} else {
 			request.setAttribute("validationMessage", validationMessage);
