@@ -50,16 +50,5 @@ public class RegistrationServletTestPart {
 		TextPage page = webClient.getPage(request);
 		assertEquals("Forwarded to view: invalid-parameters.jsp", page.getContent());
 	}
-
-	@Test
-	public void twoSubsequentRequests() throws Exception {
-		params.add(new NameValuePair("fakeValidationMessage", "OK"));
-		request.setRequestParameters(params);
-		TextPage page = webClient.getPage(request);
-		assertEquals("Forwarded to view: success.jsp", page.getContent());
-		TextPage page2 = webClient.getPage(request);
-		assertEquals("Forwarded to view: success.jsp", page2.getContent());
-	}
-
-
+	
 }

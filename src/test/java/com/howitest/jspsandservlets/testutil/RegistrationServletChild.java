@@ -32,7 +32,7 @@ public class RegistrationServletChild extends RegistrationServlet {
 	protected void goToView(String viewName, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String fakeValidationMessage = request.getParameter("fakeValidationMessage");
 		Registrator registrator = registratorLocal.get();
-		if ("".equals(fakeValidationMessage)) {
+		if ("OK".equals(fakeValidationMessage)) {
 			verify(registrator).registerUser(any(Parameters.class));
 		}
 		PrintWriter out = response.getWriter();
