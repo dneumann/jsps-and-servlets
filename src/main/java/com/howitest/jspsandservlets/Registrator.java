@@ -3,7 +3,7 @@ package com.howitest.jspsandservlets;
 public class Registrator {
 
 	public String validateData(Parameters params) {
-		String errorMessage = null;
+		String errorMessage = "";
 		if (isEmpty(params.username)) {
 			errorMessage += "No username. ";
 		}
