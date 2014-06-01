@@ -23,15 +23,12 @@ public class RegistrationServletTestPart {
 	private WebClient webClient;
 	private WebRequest request;
 	private List<NameValuePair> params;
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-	
+		
 	@Before
-	public void setUp() throws Exception {
+	public void beforeEachTest() throws Exception {
 		webClient = new WebClient();
-		request = new WebRequest(new URL("http://localhost:" + jettyPort + "/registration-servlet-child"), HttpMethod.POST);
+		request = new WebRequest(new URL("http://localhost:" + jettyPort 
+				+ "/registration-servlet-child"), HttpMethod.POST);
 		params = new ArrayList<NameValuePair>();
 	}
 
